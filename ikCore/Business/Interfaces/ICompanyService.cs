@@ -1,12 +1,13 @@
-﻿using System;
+﻿using ikCore.Entities.Models;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Business.Interfaces
+namespace ikCore.Business.Interfaces
 {
-    internal interface ICompanyService
+    public interface ICompanyService
     {
+        IEnumerable<Company> GetAll();
+        Company GetById(int id);
+        Company GetByName(string name);
+        void Create(Company company);
     }
 }
