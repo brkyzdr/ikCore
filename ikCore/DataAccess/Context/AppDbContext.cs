@@ -1,22 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.Entity;
+using ikCore.Entities.Models;
 
-public class AppDbContext : DbContext
+namespace ikCore.DataAccess.Context
 {
-    public AppDbContext() : base("name=DefaultConnection") { }
-
-    //public DbSet<User> Users { get; set; }
-    //public DbSet<Company> Companies { get; set; }
-    // Diğer DbSet'ler eklenecek...
-
-    protected override void OnModelCreating(DbModelBuilder modelBuilder)
+    public class AppDbContext : DbContext
     {
-        base.OnModelCreating(modelBuilder);
-        // Fluent API ayarları buraya
+        public AppDbContext() : base("name=AppDbContext") { }
+
+        public DbSet<User> Users { get; set; }
+        public DbSet<Company> Companies { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            // İlişki ve kısıtlama örneği:
+            modelBuilder.Entity<User>()
+                        .HasRequired(u => u.Company)
+                        .WithMany(c => c.Users)
+                        .HasForeignKey(u => u.CompanyId)
+                        .WillCascadeOnDelete(false);
+        }
     }
 }
-
