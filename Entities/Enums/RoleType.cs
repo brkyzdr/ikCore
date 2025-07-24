@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Entities.Enums
+﻿namespace Entities.Enums
 {
-    internal class RoleType
+    public enum RoleType
     {
+        Admin = 0,             // Firma sahibi
+        HRManager = 1,         // İnsan Kaynakları Yöneticisi
+        DepartmentManager = 2, // Departman Müdürü
+        Employee = 3           // Standart çalışan
     }
 }

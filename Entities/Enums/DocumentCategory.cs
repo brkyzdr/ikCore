@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Entities.Enums
+﻿namespace Entities.Enums
 {
-    internal class DocumentCategory
+    public enum DocumentCategory
     {
+        Identity = 0,        // Kimlik, pasaport vb.
+        Contract = 1,        // İş sözleşmeleri
+        Certificate = 2,     // Diploma, sertifika
+        Health = 3,          // Sağlık belgeleri
+        Other = 99           // Diğer
     }
 }

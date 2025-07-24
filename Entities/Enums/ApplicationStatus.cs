@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Entities.Enums
+﻿namespace Entities.Enums
 {
-    internal class ApplicationStatus
+    public enum ApplicationStatus
     {
+        Pending = 0,         // Başvuru alındı, henüz değerlendirilmedi
+        UnderReview = 1,     // Değerlendirme aşamasında
+        Approved = 2,        // Kabul edildi
+        Rejected = 3         // Reddedildi
     }
 }
