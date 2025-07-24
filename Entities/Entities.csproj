@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -62,11 +63,18 @@
     <Compile Include="Concrete\RecruitmentPost.cs" />
     <Compile Include="Concrete\Shift.cs" />
     <Compile Include="Concrete\User.cs" />
+    <Compile Include="DTOs\CompanyCreateDTO.cs" />
+    <Compile Include="DTOs\EmployeeDTO.cs" />
+    <Compile Include="DTOs\JobApplicationDTO.cs" />
     <Compile Include="DTOs\LeaveRequestDTO.cs" />
     <Compile Include="DTOs\LoginDTO.cs" />
+    <Compile Include="DTOs\NotificationDTO.cs" />
     <Compile Include="DTOs\PayrollDTO.cs" />
+    <Compile Include="DTOs\PerformanceReviewDTO.cs" />
     <Compile Include="DTOs\RegisterDTO.cs" />
     <Compile Include="DTOs\ResetPasswordDTO.cs" />
+    <Compile Include="DTOs\ShiftAssignmentDTO.cs" />
+    <Compile Include="DTOs\UserDTO.cs" />
     <Compile Include="Enums\ApplicationStatus.cs" />
     <Compile Include="Enums\DocumentCategory.cs" />
     <Compile Include="Enums\LeaveType.cs" />

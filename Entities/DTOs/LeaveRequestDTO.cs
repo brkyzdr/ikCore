@@ -1,12 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
+using Entities.Enums;
 
 namespace Entities.DTOs
 {
-    internal class LeaveRequestDTO
+    public class LeaveRequestDTO
     {
+        [Required]
+        public int EmployeeId { get; set; }
+
+        [Required]
+        public LeaveType LeaveType { get; set; }
+
+        [Required]
+        public DateTime StartDate { get; set; }
+
+        [Required]
+        public DateTime EndDate { get; set; }
+
+        [MaxLength(500)]
+        public string Reason { get; set; }
     }
 }

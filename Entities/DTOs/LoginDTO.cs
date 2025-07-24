@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Entities.DTOs
 {
-    internal class LoginDTO
+    public class LoginDTO
     {
+        [Required(ErrorMessage = "E-posta adresi zorunludur.")]
+        [EmailAddress(ErrorMessage = "Geçerli bir e-posta adresi giriniz.")]
+        public string Email { get; set; }
+
+        [Required(ErrorMessage = "Şifre zorunludur.")]
+        [DataType(DataType.Password)]
+        public string Password { get; set; }
     }
 }
