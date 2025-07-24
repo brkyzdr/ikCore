@@ -41,6 +41,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base\BaseEntity.cs" />
+    <Compile Include="Concrete\AdvanceRequest.cs" />
+    <Compile Include="Concrete\AttendanceRecord.cs" />
+    <Compile Include="Concrete\AuditLog.cs" />
+    <Compile Include="Concrete\Company.cs" />
+    <Compile Include="Concrete\CompanyModule.cs" />
+    <Compile Include="Concrete\Department.cs" />
+    <Compile Include="Concrete\DocumentType.cs" />
+    <Compile Include="Concrete\Employee.cs" />
+    <Compile Include="Concrete\EmployeeDocument.cs" />
+    <Compile Include="Concrete\EmployeeShift.cs" />
+    <Compile Include="Concrete\JobApplication.cs" />
+    <Compile Include="Concrete\LeaveRequest.cs" />
+    <Compile Include="Concrete\Module.cs" />
+    <Compile Include="Concrete\Notification.cs" />
+    <Compile Include="Concrete\Payroll.cs" />
+    <Compile Include="Concrete\PerformanceReview.cs" />
+    <Compile Include="Concrete\Position.cs" />
+    <Compile Include="Concrete\RecruitmentPost.cs" />
+    <Compile Include="Concrete\Shift.cs" />
+    <Compile Include="Concrete\User.cs" />
+    <Compile Include="DTOs\LeaveRequestDTO.cs" />
+    <Compile Include="DTOs\LoginDTO.cs" />
+    <Compile Include="DTOs\PayrollDTO.cs" />
+    <Compile Include="DTOs\RegisterDTO.cs" />
+    <Compile Include="DTOs\ResetPasswordDTO.cs" />
+    <Compile Include="Enums\ApplicationStatus.cs" />
+    <Compile Include="Enums\DocumentCategory.cs" />
+    <Compile Include="Enums\LeaveType.cs" />
+    <Compile Include="Enums\RoleType.cs" />
+    <Compile Include="Interfaces\IEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -50,11 +81,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Base\" />
-    <Folder Include="Concrete\" />
-    <Folder Include="DTOs\" />
-    <Folder Include="Enums\" />
-    <Folder Include="Interfaces\" />
     <Folder Include="Mappings\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
