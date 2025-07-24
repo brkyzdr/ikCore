@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using Entities.Concrete;
 
 namespace Business.Services.Abstract
 {
-    internal interface IShiftService
+    public interface IShiftService
     {
+        void Create(Shift entity);
+        void Update(Shift entity);
+        void Delete(int id);
+
+        Shift GetById(int id);
+        List<Shift> GetAll();
+        List<Shift> GetByCompanyId(int companyId);
     }
 }

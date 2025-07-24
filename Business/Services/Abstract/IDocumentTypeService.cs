@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using Entities.Concrete;
 
 namespace Business.Services.Abstract
 {
-    internal interface IDocumentTypeService
+    public interface IDocumentTypeService
     {
+        void Create(DocumentType entity);
+        void Update(DocumentType entity);
+        void Delete(int id);
+
+        DocumentType GetById(int id);
+        List<DocumentType> GetAll();
+        List<DocumentType> GetByCompanyId(int companyId); // Firma özel belge türleri
     }
 }

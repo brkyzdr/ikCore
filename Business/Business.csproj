@@ -115,6 +115,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Abstract\IAdvanceRequestService.cs" />
+    <Compile Include="Services\Abstract\IAttendanceRecordService.cs" />
+    <Compile Include="Services\Abstract\IAuditLogService.cs" />
+    <Compile Include="Services\Abstract\ICompanyModuleService.cs" />
+    <Compile Include="Services\Abstract\ICompanyService.cs" />
+    <Compile Include="Services\Abstract\IDepartmentService.cs" />
+    <Compile Include="Services\Abstract\IDocumentTypeService.cs" />
+    <Compile Include="Services\Abstract\IEmployeeDocumentService.cs" />
+    <Compile Include="Services\Abstract\IEmployeeService.cs" />
+    <Compile Include="Services\Abstract\IEmployeeShiftService.cs" />
+    <Compile Include="Services\Abstract\IJobApplicationService.cs" />
+    <Compile Include="Services\Abstract\ILeaveService.cs" />
+    <Compile Include="Services\Abstract\IModuleService.cs" />
+    <Compile Include="Services\Abstract\INotificationService.cs" />
+    <Compile Include="Services\Abstract\IPayrollService.cs" />
+    <Compile Include="Services\Abstract\IPerformanceReviewService.cs" />
+    <Compile Include="Services\Abstract\IPositionService.cs" />
+    <Compile Include="Services\Abstract\IRecruitmentPostService.cs" />
+    <Compile Include="Services\Abstract\IShiftService.cs" />
+    <Compile Include="Services\Abstract\IUserService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\Core.csproj">
@@ -131,10 +151,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Rules\" />
-    <Folder Include="Services\Abstract\" />
     <Folder Include="Services\Concrete\" />
-    <Folder Include="Validators\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

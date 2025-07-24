@@ -1,12 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using Entities.Concrete;
 
 namespace Business.Services.Abstract
 {
-    internal interface INotificationService
+    public interface INotificationService
     {
+        void Send(Notification notification);
+        void MarkAsRead(int notificationId);
+        void Delete(int id);
+
+        Notification GetById(int id);
+        List<Notification> GetAll();
+        List<Notification> GetByUserId(int userId);
+        List<Notification> GetUnreadByUserId(int userId);
     }
 }
