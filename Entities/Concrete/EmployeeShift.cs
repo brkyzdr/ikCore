@@ -7,6 +7,7 @@ namespace Entities.Concrete
     public class EmployeeShift : BaseEntity, IEntity
     {
         public int EmployeeId { get; set; }
+        public int CompanyId { get; set; }
         public int ShiftId { get; set; }
         public DateTime WorkDate { get; set; }   // Vardiyanın ait olduğu gün
         public string Notes { get; set; }        // İsteğe bağlı açıklama

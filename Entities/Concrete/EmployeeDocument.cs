@@ -7,6 +7,7 @@ namespace Entities.Concrete
     public class EmployeeDocument : BaseEntity, IEntity
     {
         public int EmployeeId { get; set; }
+        public int CompanyId { get; set; }
         public int DocumentTypeId { get; set; }
         public string FilePath { get; set; }           // Belgelerin saklandığı yol
         public string Description { get; set; }        // Belgeye dair açıklama

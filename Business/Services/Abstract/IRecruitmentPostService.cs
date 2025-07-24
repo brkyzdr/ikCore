@@ -1,12 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using Entities.Concrete;
 
 namespace Business.Services.Abstract
 {
-    internal interface IRecruitmentPostService
+    public interface IRecruitmentPostService
     {
+        void Create(RecruitmentPost entity);
+        void Update(RecruitmentPost entity);
+        void Delete(int id);
+
+        RecruitmentPost GetById(int id);
+        List<RecruitmentPost> GetAll();
+        List<RecruitmentPost> GetByCompanyId(int companyId);
+        List<RecruitmentPost> GetActivePosts(); // Yayında olan ilanlar
     }
 }

@@ -135,6 +135,26 @@
     <Compile Include="Services\Abstract\IRecruitmentPostService.cs" />
     <Compile Include="Services\Abstract\IShiftService.cs" />
     <Compile Include="Services\Abstract\IUserService.cs" />
+    <Compile Include="Services\Concrete\AdvanceRequestManager.cs" />
+    <Compile Include="Services\Concrete\AttendanceRecordManager.cs" />
+    <Compile Include="Services\Concrete\AuditLogManager.cs" />
+    <Compile Include="Services\Concrete\CompanyManager.cs" />
+    <Compile Include="Services\Concrete\CompanyModuleManager.cs" />
+    <Compile Include="Services\Concrete\DepartmentManager.cs" />
+    <Compile Include="Services\Concrete\DocumentTypeManager.cs" />
+    <Compile Include="Services\Concrete\EmployeeDocumentManager.cs" />
+    <Compile Include="Services\Concrete\EmployeeManager.cs" />
+    <Compile Include="Services\Concrete\EmployeeShiftManager.cs" />
+    <Compile Include="Services\Concrete\JobApplicationManager.cs" />
+    <Compile Include="Services\Concrete\LeaveManager.cs" />
+    <Compile Include="Services\Concrete\ModuleManager.cs" />
+    <Compile Include="Services\Concrete\NotificationManager.cs" />
+    <Compile Include="Services\Concrete\PayrollManager.cs" />
+    <Compile Include="Services\Concrete\PerformanceReviewManager.cs" />
+    <Compile Include="Services\Concrete\PositionManager.cs" />
+    <Compile Include="Services\Concrete\RecruitmentPostManager.cs" />
+    <Compile Include="Services\Concrete\ShiftManager.cs" />
+    <Compile Include="Services\Concrete\UserManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\Core.csproj">
@@ -150,9 +170,7 @@
       <Name>Entities</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Services\Concrete\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
