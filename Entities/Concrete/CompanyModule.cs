@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Entities.Base;
+using Entities.Interfaces;
 
 namespace Entities.Concrete
 {
-    internal class CompanyModule
+    public class CompanyModule : BaseEntity, IEntity
     {
+        public int CompanyId { get; set; }
+        public int ModuleId { get; set; }
+        public bool IsActive { get; set; }
+
+        // Navigation properties
+        public virtual Company Company { get; set; }
+        public virtual Module Module { get; set; }
     }
 }

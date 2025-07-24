@@ -1,12 +1,21 @@
-﻿using System;
+﻿using Entities.Base;
+using Entities.Interfaces;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Entities.Concrete
 {
-    internal class Company
+    public class Company : BaseEntity, IEntity
     {
+        public string Name { get; set; }
+        public string TaxNumber { get; set; }
+        public string Sector { get; set; }
+        public string Address { get; set; }
+
+        // Navigation properties
+        public virtual ICollection<User> Users { get; set; }
+        public virtual ICollection<Employee> Employees { get; set; }
+        public virtual ICollection<Department> Departments { get; set; }
+        public virtual ICollection<Module> Modules { get; set; }
+        public virtual ICollection<CompanyModule> CompanyModules { get; set; }
     }
 }

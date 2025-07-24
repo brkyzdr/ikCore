@@ -1,12 +1,17 @@
-﻿using System;
+﻿using Entities.Base;
+using Entities.Interfaces;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Entities.Concrete
 {
-    internal class Position
+    public class Position : BaseEntity, IEntity
     {
+        public int DepartmentId { get; set; }
+        public string Title { get; set; }              // Örn: "Yazılım Geliştirici", "İK Uzmanı"
+        public string Description { get; set; }        // Pozisyon açıklaması (isteğe bağlı)
+
+        // Navigation properties
+        public virtual Department Department { get; set; }
+        public virtual ICollection<Employee> Employees { get; set; }
     }
 }

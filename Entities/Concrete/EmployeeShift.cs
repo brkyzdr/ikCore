@@ -1,12 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Entities.Base;
+using Entities.Interfaces;
+using System;
 
 namespace Entities.Concrete
 {
-    internal class EmployeeShift
+    public class EmployeeShift : BaseEntity, IEntity
     {
+        public int EmployeeId { get; set; }
+        public int ShiftId { get; set; }
+        public DateTime WorkDate { get; set; }   // Vardiyanın ait olduğu gün
+        public string Notes { get; set; }        // İsteğe bağlı açıklama
+
+        // Navigation properties
+        public virtual Employee Employee { get; set; }
+        public virtual Shift Shift { get; set; }
     }
 }
