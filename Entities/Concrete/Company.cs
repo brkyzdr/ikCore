@@ -10,6 +10,7 @@ namespace Entities.Concrete
         public string TaxNumber { get; set; }
         public string Sector { get; set; }
         public string Address { get; set; }
+        public string UniqueCode { get; set; }
 
         // Navigation properties
         public virtual ICollection<User> Users { get; set; }

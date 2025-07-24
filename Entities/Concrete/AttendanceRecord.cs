@@ -11,6 +11,9 @@ namespace Entities.Concrete
         public TimeSpan? CheckInTime { get; set; }
         public TimeSpan? CheckOutTime { get; set; }
         public string Source { get; set; } // "Manuel", "Cihaz", "Mobil" vb.
+        public int CompanyId { get; set; }
+        public DateTime Date { get; set; }
+
 
         // Navigation property
         public virtual Employee Employee { get; set; }
