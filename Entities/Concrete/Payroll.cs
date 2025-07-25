@@ -7,6 +7,7 @@ namespace Entities.Concrete
     public class Payroll : BaseEntity, IEntity
     {
         public int EmployeeId { get; set; }
+        public int CompanyId { get; set; }
         public DateTime PeriodStart { get; set; }
         public DateTime PeriodEnd { get; set; }
 

@@ -7,6 +7,7 @@ namespace Entities.Concrete
     public class JobApplication : BaseEntity, IEntity
     {
         public int RecruitmentPostId { get; set; }
+        public int CompanyId { get; set; }
 
         public string ApplicantName { get; set; }
         public string Email { get; set; }

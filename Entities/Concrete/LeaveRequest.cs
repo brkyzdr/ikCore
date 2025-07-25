@@ -7,6 +7,8 @@ namespace Entities.Concrete
     public class LeaveRequest : BaseEntity, IEntity
     {
         public int EmployeeId { get; set; }
+        public int CompanyId { get; set; }
+        public int DepartmentId { get; set; }
         public string LeaveType { get; set; }      // Örn: "Yıllık", "Mazeret", "Hastalık"
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }

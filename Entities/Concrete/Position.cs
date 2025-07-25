@@ -7,6 +7,7 @@ namespace Entities.Concrete
     public class Position : BaseEntity, IEntity
     {
         public int DepartmentId { get; set; }
+        public int CompanyId { get; set; }
         public string Title { get; set; }              // Örn: "Yazılım Geliştirici", "İK Uzmanı"
         public string Description { get; set; }        // Pozisyon açıklaması (isteğe bağlı)
 

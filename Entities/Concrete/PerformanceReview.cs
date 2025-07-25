@@ -7,6 +7,7 @@ namespace Entities.Concrete
     public class PerformanceReview : BaseEntity, IEntity
     {
         public int EmployeeId { get; set; }
+        public int CompanyId { get; set; }
         public DateTime ReviewPeriodStart { get; set; }
         public DateTime ReviewPeriodEnd { get; set; }
 
