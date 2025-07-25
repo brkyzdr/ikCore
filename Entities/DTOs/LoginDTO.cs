@@ -11,5 +11,10 @@ namespace Entities.DTOs
         [Required(ErrorMessage = "Şifre zorunludur.")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
+
+        // Giriş yapan kullanıcıya ait bilgiler (sunucu tarafında set edilecek)
+        public int UserId { get; set; }
+        public string Role { get; set; }
+        public int? CompanyId { get; set; }
     }
 }
